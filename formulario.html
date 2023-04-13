@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulário</title>
+</head>
+<body>
+
+	<h1>Formulário - Cadastro de Professor</h1> 
+
+<form>
+
+<fieldset>
+	<legend align="center"><h2>Dados pessoais</h2></legend>
+		
+	<label  for="nome"><b>Nome:</b></label><br>
+	<input type="text" id="nome" name="nome" size="30" maxlength="30" minlength="2" required placeholder="Digite seu nome">
+
+	<br><br>
+
+	<label  for="telefone"><b>Telefone:</b></label><br>
+	<input type="tel" id="telefone" name="telefone" size="30" maxlength="15" minlength="11" required placeholder="Digite seu telefone">
+
+	<br><br>
+
+	<label  for="Email"><b>Email:</b></label><br>
+	<input type="Email" id="Email" name="Email" size="30" required placeholder="Digite seu email">
+
+	<br><br>
+
+	<label  for="foto"><b>Foto:</b></label><br>
+	<input type="file" id="foto" name="foto" size="30" accept=".jpg,.png,.jfif,.jpeg">
+
+	<br><br>
+
+	<label  for="dataN"><b>Data de Nascimento:</b></label><br>
+	<input type="date" id="dataN" name="dataN" size="30">
+
+	<br><br>
+
+	<label  for="idade"><b>Idade:</b></label><br>
+	<input type="number" id="idade" name="idade" size="30" min="21" max="60" step="1">
+
+	<br><br>
+
+	<label  for="senha"><b>Senha:</b></label><br>
+	<input type="password" id="senha" name="senha" size="10" minlength="8" maxlength="15" required>
+
+	<br><br>
+
+	<label  for="sexo"><b>Sexo:</b></label><br>
+	<input type="radio" id="sexo" name="sexo" value="F">Feminino<br>
+	<input type="radio" id="sexo" name="sexo" value="M">Masculino
+
+</fieldset>
+
+		<br>
+
+<fieldset>
+	<legend align="center"><h2>Dados Profissionais</h2></legend>
+
+	<label  for="dataHoraCadastro"><b>Dia e Hora:</b></label><br>
+	<input type="datetime-local" name="dataHoraCadastro" id="dataHoraCadastro">
+
+	<br><br>
+
+	<label  for="professor"><b>Cargo:</b></label><br>
+	<input type="text" value="Professor" readonly name="professor" id="professor">
+
+	<br><br>
+
+	<label  for="CorUniforme"><b>Cor do Uniforme:</b></label><br>
+	<input type="color" id="CorUniforme" name="CorUniforme" value="#FF0000" list="cores">
+
+	<datalist id="cores">
+		<option value="#FF0000">Vermelho</option>
+		<option value="#FFA500">Laranja</option>
+		<option value="#FFFF00">Amarelo</option>
+	</datalist>
+
+<br><br>
+
+	<label><b>Periodos de aula:</b></label><br>
+	<input type="checkbox" name="Manhã" id="Manhã" value="M">Manhã<br>
+	<input type="checkbox" name="Tarde" id="Tarde" value="T" checked>Tarde<br>
+	<input type="checkbox" name="Noite" id="Noite" value="N">Noite
+
+	<br><br>
+
+	<label  for="HoraEntrada"><b>Horário de Entrada:</b></label><br>
+	<input type="time" name="HoraEntrada" id="HoraEntrada">
+
+	<br><br>
+
+	<label  for="MesInicio"><b>Mês de início:</b></label><br>
+	<input type="month" name="MesInicio" id="MesInicio">
+
+	<br><br>
+
+	<label  for="SemanaInicio"><b>Semana de início:</b></label><br>
+	<input type="week" name="SemanaInicio" id="SemanaInicio">
+
+	<br><br>
+
+	<label  for="Curso"><b>Curso:</b></label><br>
+	<select id="Curso" name="Curso">
+		<option></option>
+		<option value="DS" >Des. Sistemas</option>
+		<option value="ED">Edificações</option>
+		<option value="EN">Enfermagem</option>
+		<option value="GE">Geodésia</option>
+		<option value="ME">Mecânica</option>
+		<option value="QU">Qualidade</option>
+	</select>
+
+	<br><br>
+
+	<label  for="Disciplinas"><b>Disciplinas:</b><br><small>(ctrl+click)</small></label><br>
+	<select id="Disciplinas" name="Disciplinas" size=4 multiple>
+		<option value="BD" >Banco de Dados</option>
+		<option value="DAW">DAW</option>
+		<option value="APSI">APSI</option>
+		<option value="LOG">Lógica</option>
+	</select>
+
+		<br><br>
+
+	<label  for="veiculo"><b>Veiculo que utilizará no campus:</b></label><br>
+	<select id="veiculo" name="veiculo">
+		<optgroup label="Carros">
+			<option value="GM" >GM</option>
+			<option value="VW">VW</option>
+			<option value="Renault">Renault</option>
+		</optgroup>
+
+		<optgroup label="Motos">
+			<option value="Honda" >Honda</option>
+			<option value="Yamaha">Yamaha</option>
+			<option value="Suzuki">Suzuki</option>
+		</optgroup>
+	</select>
+
+	<br><br>
+
+	<label for="conhecimento"><b>Conhecimento:</b></label><br>
+	<input type="text" name="conhecimento" id="conhecimento" list="lista-conhecimento">
+
+	<datalist id="lista-conhecimento">
+		<option value="HTML5">HTML5</option>
+		<option value="HTML4">HTML4</option>
+		<option value="CSS3">CSS3</option>
+		<option value="PHP">PHP</option>
+	</datalist>
+
+	<br><br>
+
+	<label for="capacitacao"><b>Que nota voce se daria?:</b><small>(de 0 a 10)</small></label><br>
+	<input type="range" name="capacitacao" id="capacitacao" min="0" max="10" value="0">
+
+	<br><br>
+
+	<label for="obs"><b>Fale um pouco sobre você:</b></label><br>
+	<textarea spellcheck rows="6" cols="50" name="obs" id="obs"></textarea>
+
+	<br><br>
+
+	<label for="url"><b>Linkedin:</b></label><br>
+	<input type="url" name="url" id="url" required>
+
+
+
+
+</fieldset>
+
+<br><br>
+
+<input type="submit" value="Cadastrar">
+<input type="reset" value="Limpar">
+<input type="button" value="Mensagem" onclick="alert('oi!');">
+
+</form>
+
+</body>
+</html>
